@@ -55,5 +55,6 @@ jobs:
           echo "updating image tag in values file"
           sed -i "s,tag:.*,tag:\ ${{ github.sha }}," helm/webapp/values.yaml
           git add . && git commit -m "update image tag"
+          echo " image tag in values file is updated with latest now after build"
           git push
 
